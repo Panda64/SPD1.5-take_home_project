@@ -1,5 +1,10 @@
-<form>
-    <input type="text" id="location">
-    <label for="location">Enter your zip code</label>
-    <input type="submit">
+{% extends 'base.html' %}
+{% block content %}
+
+<form method="GET" action="/mood">
+    <label for="location" class="form-label">Enter your zip code &nbsp</label>
+    <input type="text" id="location" name="location" class="form-control">
+    <input class="btn btn-primary" type="submit">
 </form>
+
+{% endblock %}

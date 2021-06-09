@@ -1,4 +1,11 @@
 body {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 50px;
+    padding-right: 1000px;
+}
+
+.btn-primary {
+    margin-top: 10px;
 }

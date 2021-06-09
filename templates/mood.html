@@ -1,7 +1,12 @@
-<h3>Weather: {{ weather[weather][0][main] }}, {{ '%0.2f'| format(((weather[main][temp] - 273.15) * (9/5) + 32)|float) }}F </h3>
+{% extends 'base.html' %}
+{% block content %}
 
-<form>
-    <input type="text" id="mood">
-    <label for="location">How are you feeling today?</label>
-    <input type="submit">
+<h3>Weather around {{ weather['name'] }}: {{ weather['weather'][0]['main'] }}, {{ weather['main']['temp'] }}F </h3>
+
+<form method="GET" action="/result">
+    <label for="mood" class="form-label">How are you feeling today?</label>
+    <input type="text" id="mood" name="mood" class="form-control">
+    <input class="btn btn-primary" type="submit">
 </form>
+
+{% endblock %}
