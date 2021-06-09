@@ -1,4 +1,3 @@
-import jinja2
 import os
 import requests 
 
@@ -17,6 +16,7 @@ API_KEY = os.getenv('API_KEY')
 def home():
     return render_template('location.html')
 
+
 @app.route('/mood')
 def mood():
     zip_code = request.args.get('location')
@@ -32,9 +32,11 @@ def mood():
 
     return render_template('mood.html', weather=weather)
 
+
 @app.route('/result')
 def result():
     return render_template('result.html')
+
 
 
 if __name__ == '__main__':
