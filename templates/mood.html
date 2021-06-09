@@ -1,0 +1,7 @@
+<h3>Weather: {{ weather[weather][0][main] }}, {{ '%0.2f'| format(((weather[main][temp] - 273.15) * (9/5) + 32)|float) }}F </h3>
+
+<form>
+    <input type="text" id="mood">
+    <label for="location">How are you feeling today?</label>
+    <input type="submit">
+</form>
